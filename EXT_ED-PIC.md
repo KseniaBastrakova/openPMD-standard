@@ -362,7 +362,8 @@ particle. Therefore, this extension requires the two following attributes:
                             absolutely necessary, reading the additional
                             `weighting` record can be avoided for performance
                             reasons like this:
-  ```python
+                            
+```python
 f = h5py.File('example.h5')
 species = f["<path_to_species_group>"]
 q = species["charge"][:]
@@ -374,8 +375,8 @@ if q.attrs["macroWeighted"] == 0 and p != 0:
 else :
     # No need to read the weighting from disk
     q_macro = u_si * q
+  
 ```
-
 ### Namings for `Records` per Particle Species
 
 When added as records to a particle output, the following naming conventions
